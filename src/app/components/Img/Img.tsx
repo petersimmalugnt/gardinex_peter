@@ -8,7 +8,7 @@ interface ImgProps {
     src: string,
     alt?: string,
     className?: string,
-    aspectRatio?: string,
+    aspectRatio?: '1/1' | '2/3' | '3/2' | '3/4' | '4/3' | '16/9' | '9/16',
     minVh?: boolean,
     offset?: '' | 'left' | 'right' | 'left right',
     place?: '' | 'top' | 'bottom' | 'left' | 'right' | 'center' | 'top left' | 'top right' | 'top center' | 'center top' | 'center center' | 'center bottom' | 'bottom left' | 'bottom center' | 'bottom right',
