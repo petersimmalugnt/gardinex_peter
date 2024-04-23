@@ -35,23 +35,14 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 # gardinex_peter
-.
-.
-.
-.
-.
-.
-.
+
 
 ## Javascript from Webflow prototype:
-.
+
 Link: https://gardinex.webflow.io/
-.
+
 Designer preview link:https://preview.webflow.com/preview/gardinex?utm_medium=preview_link&utm_source=dashboard&utm_content=gardinex&preview=b4d9b6ecdfa223379bcf4b6312083dd3&workflow=preview
-.
-.
-.
-.
+
 ```javascript
 
 <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
