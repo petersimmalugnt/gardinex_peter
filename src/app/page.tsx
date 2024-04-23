@@ -1,113 +1,147 @@
-import Image from "next/image";
+'use client';
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis';
+import Img from "./components/Img/Img";
+import Container from "./components/Container/Container";
+import Section from './components/Section/Section';
+import Button from './components/Button/Button';
 
 export default function Home() {
+
+  const lenis = useLenis(({ scroll }) => {
+    // called every scroll
+  })
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <ReactLenis root>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+        <Img
+          src="/assets/2x3/image 64.png"
+          aspectRatio="3/2"
+          minVh={true}
+          marginTop='none'
         />
-      </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <Section layout={1}>
+          <div className='w-full bg-red-300'>
+            <Button href='/' variant='plain'>Add to cart</Button>
+            <p>Nam venenatis vitae nulla sit amet ultrices. Etiam ut massa fringilla, elementum purus non, mollis mauris. Vestibulum vehicula neque eu tortor vestibulum lobortis. Phasellus vel ex id sapien condimentum tristique. Pellentesque at posuere elit. Ut ipsum leo, tincidunt ac tellus eget, placerat pharetra tortor.</p></div>
+          <div className='w-full min-h-4xl bg-red-300'>2</div>
+          <div className='w-full min-h-4xl bg-red-300'>3</div>
+          <div className='w-full min-h-4xl bg-red-300'>3</div>
+          <div className='w-full min-h-4xl bg-red-300'>3</div>
+          <div className='w-full min-h-4xl bg-red-300'>3</div>
+          <div className='w-full min-h-4xl bg-red-300'>3</div>
+        </Section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <Section layout={2}>
+          <div className='w-full bg-red-300 text-center text-md'><p>Nam venenatis vitae nulla sit amet ultrices. Etiam ut massa fringilla, elementum purus non, mollis mauris. Vestibulum vehicula neque eu tortor vestibulum lobortis. Phasellus vel ex id sapien condimentum tristique. Pellentesque at posuere elit. Ut ipsum leo, tincidunt ac tellus eget, placerat pharetra tortor.</p></div>
+        </Section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+        <Img
+          src="/assets/2x3/image 64.png"
+          aspectRatio="3/2"
+          marginTop='none'
+        />
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <Section layout={3}>
+          <div className='w-full bg-red-300 text-center text-md'><p>Nam venenatis vitae nulla sit amet ultrices. Etiam ut massa fringilla, elementum purus non, mollis mauris. Vestibulum vehicula neque eu tortor vestibulum lobortis. Phasellus vel ex id sapien condimentum tristique. Pellentesque at posuere elit. Ut ipsum leo, tincidunt ac tellus eget, placerat pharetra tortor.</p></div>
+        </Section>
+
+        <Img
+          src="/assets/2x3/image 64.png"
+          aspectRatio="3/2"
+          marginTop='none'
+        />
+
+        <Section layout={4}>
+          <div className='w-full min-h-4xl bg-red-300'>2</div>
+          <div className='w-full min-h-4xl bg-red-300'>3</div>
+          <div className='w-full min-h-4xl bg-red-300'>3</div>
+          <div className='w-full min-h-4xl bg-red-300'>3</div>
+          <div className='w-full min-h-4xl bg-red-300'>3</div>
+          <div className='w-full min-h-4xl bg-red-300'>3</div>
+        </Section>
+
+        <Img
+          src="/assets/2x3/image 64.png"
+          aspectRatio="3/2"
+          marginTop='none'
+        />
+
+        <Section layout={5}>
+          <Img
+            src="/assets/2x3/image 64.png"
+            aspectRatio="3/2"
+            minVh={false}
+            sticky={true}
+            width="md"
+            place="top center"
+            offset="right"
+          />
+          <Img
+            src="/assets/3x4/image 28.png"
+          />
+        </Section>
+
+        <Section layout={5}>
+          <Img src="/assets/2x3/image 64.png" aspectRatio="3/2" />
+        </Section>
+
+        <Section layout={5}>
+          <Img
+            src="/assets/3x4/image 4.png"
+            aspectRatio="3/4"
+            width="xl"
+            place="top right"
+            offset=""
+            span={7}
+          />
+          <Container place="right" offset="left" width="lg" span={5} sticky={true}>
+            <h3 className="text-md uppercase">Lorem ipsum dolor sit amet</h3><br/>
+            <p>
+              Quisque eleifend, sapien nec facilisis vestibulum, turpis ante dictum erat, non imperdiet ligula velit in nulla. Nam aliquam, risus a volutpat ullamcorper, lectus tellus congue quam, vitae malesuada est libero sed eros. Morbi ornare, ante vel auctor hendrerit, tortor elit pretium orci, vulputate convallis lorem nisl in est. Nam sit amet lacus nibh. Nam nec massa imperdiet, auctor tortor ut, dapibus dolor. Maecenas rhoncus erat ac diam fringilla pulvinar. Donec pulvinar nunc vitae neque tincidunt maximus. Vestibulum pretium vel nulla id mattis. Sed cursus bibendum elit.
+              <br /><br />
+              Sed tempus neque nec sapien venenatis gravida. Vestibulum id elementum arcu, id sollicitudin est. Sed sed consectetur elit. Nulla venenatis pellentesque diam, interdum maximus tellus condimentum ac. Phasellus ac pharetra nisi, nec interdum justo. Vivamus quis volutpat orci. Cras et tincidunt augue.
+              <br /><br />
+              Phasellus nisi arcu, consequat ut viverra ut, viverra facilisis risus. Cras imperdiet leo eu mollis rhoncus. Duis ultricies, urna eget maximus tempus, neque ante tincidunt lorem, ut congue turpis neque in eros. Duis rhoncus libero sit amet dignissim consectetur. Vestibulum dui quam, facilisis feugiat tincidunt eget, facilisis nec arcu. Integer tristique posuere sem, a aliquet est consectetur sed. Integer bibendum cursus sapien, in malesuada odio. Morbi nisl magna, sagittis id nisi et, gravida elementum magna. Phasellus vestibulum orci in posuere suscipit. Fusce elementum felis nec ex facilisis tincidunt.
+            </p>
+          </Container>
+        </Section>
+
+        <Section layout={5}>
+          <Img
+            src="/assets/3x4/image 4.png"
+            aspectRatio="3/4"
+            sticky={true}
+            width="lg"
+            place="top center"
+            offset="left right"
+          />
+          <Container place="center" width="xl" span={2} offset="" marginTop="none" marginBottom="none" mobileFullWidth={true} >
+            <Img src="/assets/3x4/image 2.png" aspectRatio="3/4" marginBottom='none' />
+            <Container place='center' width='lg' marginTop='xs'>
+              <p className='text-xs text-center'>När man sedan stiger in i vardagsrummet möts man av en fantastisk kakelugn som verkligen förhöjer den mysiga atmosfären. </p>
+            </Container>
+          </Container>
+        </Section>
+
+        <Section layout={5}>
+          <Img
+            src="/assets/3x4/image 2.png"
+            aspectRatio="3/4"
+            width="lg"
+            place="right"
+            offset=""
+          />
+          <Container place="" width="" span={1} offset="left right" mobileFullWidth={true}>
+            <p>
+              Den eleganta fiskbensparketten genom hela lägenheten skapar en tidlös känsla i hemmet. När man sedan stiger in i vardagsrummet möts man av en fantastisk kakelugn som verkligen förhöjer den mysiga atmosfären. Här kan man sitta och njuta av både dess värme och skönhet. I mitten av rummet finner man ett marmorbord med klassiska inredningsdetalj som fångar ens uppmärksamhet - ett schackbräde och en flowerpot lampa i en greige nyans.
+            </p>
+          </Container>
+        </Section>
+
+      </ReactLenis>
+    </>
   );
 }

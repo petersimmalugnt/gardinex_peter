@@ -1,0 +1,12 @@
+.image[data-observe-inview-scrub="true"] { --plx: 1; }
+  .image[data-plx-amt="tiny"] { --plx-amt: 5%; }
+  .image[data-plx-amt="small"] { --plx-amt: 10%; }
+  .image[data-plx-amt="medium"] { --plx-amt: 15%; }
+  .image[data-plx-amt="large"] { --plx-amt: 20%; }
+  .image[data-plx-amt="xlarge"] { --plx-amt: 25%; }
+  .image[data-plx-amt="huge"] { --plx-amt: 30%; }
+  .image-container > img {
+    transform:
+      scale(calc(100% + (var(--plx-amt, 15%) * var(--plx, 0))))
+      translateY(calc( ( 0% - var(--plx-amt, 15%) / 2 + ( var(--plx-amt, 15%) * var(--y,0.5) ) ) * var(--plx, 0)));
+  }
