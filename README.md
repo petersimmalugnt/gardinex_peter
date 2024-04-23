@@ -45,9 +45,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 
 
-Javascript from Webflow prototype:
-https://gardinex.webflow.io/
-https://preview.webflow.com/preview/gardinex?utm_medium=preview_link&utm_source=dashboard&utm_content=gardinex&preview=b4d9b6ecdfa223379bcf4b6312083dd3&workflow=preview
+## Javascript from Webflow prototype:
+
+Link: https://gardinex.webflow.io/
+
+Designer preview link:https://preview.webflow.com/preview/gardinex?utm_medium=preview_link&utm_source=dashboard&utm_content=gardinex&preview=b4d9b6ecdfa223379bcf4b6312083dd3&workflow=preview
 
 
 ```javascript
