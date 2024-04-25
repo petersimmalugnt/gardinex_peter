@@ -24,7 +24,7 @@ export default function RootLayout({
         <DebugGrid columns={12}/>
         <CookiePopup />
         <Header
-          showLargeLogo={false}
+          showLargeLogo={true}
           cartLength={0}
           lang={"en"}
           currency={"eur"}

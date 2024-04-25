@@ -8,10 +8,11 @@ type ButtonProps = {
   className?: string;
   variant?: 'primary' | 'secondary' | 'plain';
   invertColor?: boolean;
+  isCurrent?: boolean;
   onClick?: () => void;
 };
 
-const Button = ({ children, href, type = "button", className = '', variant, invertColor, onClick}: ButtonProps) => {
+const Button = ({ children, href, type = "button", className = '', variant, invertColor, isCurrent = false, onClick}: ButtonProps) => {
 
     const BaseStyle = `flex w-max text-center justify-center px-xs py-3xs text-md font-medium uppercase border border-black ${invertColor && 'invert'}`;
     let VariantStyle = `${BaseStyle} bg-black text-white hover:text-black hover:bg-transparent`;
@@ -21,7 +22,7 @@ const Button = ({ children, href, type = "button", className = '', variant, inve
     }
 
     if (variant === 'plain') {
-        VariantStyle = 'flex w-max text-center link font-medium';
+        VariantStyle = `flex w-max text-center ${isCurrent ? 'link-current' : 'link'} font-medium`;
     }
 
 
