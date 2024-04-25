@@ -82,17 +82,17 @@ const Header = ({ showLargeLogo = false, cartLength = 0, lang = 'en', currency =
                     </svg>
                 </Link>
                 <nav className={`flex gap-x-8 flex-wrap self-center justify-center font-medium md:absolute md:z-0 md:bg-white md:top-[calc(0.25rem_-_var(--logoHeight))] md:left-0 md:right-0 md:flex-col md:items-center md:text-center md:px-side-xs md:pt-[calc(var(--logoHeight)_+_var(--headerHeight)_+_2.75rem)] md:pb-lg md:gap-y-3xs ${isVisible ? '' : styles.close} `}>
-                    <Link href="/shop" className='link'>shop</Link>
-                    <Link href="/guide" className='link'>guide</Link>
-                    <Link href="/consultation" className='link'>consultation</Link>
-                    <Link href="/journal" className='link'>journal</Link>
-                    <Link href="/samples" className='link'>samples</Link>
+                    <Button href="/shop" variant='plain' isCurrent={false}>shop</Button>
+                    <Button href="/guide" variant='plain' isCurrent={false}>guide</Button>
+                    <Button href="/consultation" variant='plain' isCurrent={false}>consultation</Button>
+                    <Button href="/journal" variant='plain' isCurrent={false}>journal</Button>
+                    <Button href="/samples" variant='plain' isCurrent={false}>samples</Button>
                     <Button variant='plain' className='link truncate hidden mt-lg md:flex'>{lang} - {currency}</Button>
                 </nav>
                 <div className='flex justify-self-end gap-x-8 font-medium'>
-                    <Button variant='plain' className='link truncate md:hidden'>{lang} - {currency}</Button>
-                    <Button variant='plain' className='link truncate hidden md:block' onClick={toggleOpen}>menu</Button> 
-                    <Button variant='plain' className='link truncate'>cart ({cartLength})</Button>
+                    <Button variant='plain' className='truncate md:hidden'>{lang} - {currency}</Button>
+                    <Button variant='plain' className='truncate hidden md:block' onClick={toggleOpen}>menu</Button> 
+                    <Button variant='plain' className='truncate'>cart ({cartLength})</Button>
                 </div>
             </header>
         </>
