@@ -1,23 +1,19 @@
 'use client';
-import { ReactLenis, useLenis } from '@studio-freight/react-lenis';
+import { ReactLenis } from 'lenis/react';
 import Img from "./components/Img/Img";
 import Container from "./components/Container/Container";
 import Section from './components/Section/Section';
 import Button from './components/Button/Button';
+import ParallaxImg from './components/ParallaxImg/ParallaxImg';
 
 export default function Home() {
-
-  const lenis = useLenis(({ scroll }) => {
-    // called every scroll
-  })
-
+  
   return (
     <>
       <ReactLenis root>
-
-        <Img
+        <ParallaxImg
           src="/assets/2x3/image 64.png"
-          aspectRatio="3/2"
+          aspectRatio='3/2'
           minVh={true}
           marginTop='none'
         />
@@ -41,6 +37,13 @@ export default function Home() {
         <Img
           src="/assets/2x3/image 64.png"
           aspectRatio="3/2"
+          marginTop='none'
+        />
+
+        <ParallaxImg
+          src="/assets/2x3/image 64.png"
+          aspectRatio="3/2"
+          minVh={true}
           marginTop='none'
         />
 
